@@ -1,0 +1,145 @@
+dataModelId: 0479cdb1-a074-4dbc-b021-d73064f40e4b
+name: SAAS BUSINESS PERFORMANCE
+schemaVersion: 1
+pages:
+  - id: 5XEj-z_C_k
+    name: Page 1
+    elements:
+      - id: C06e4vfGwf
+        kind: table
+        source:
+          connectionId: 04a274fb-78d1-4ad6-9bb4-f2b8bb52664d
+          kind: warehouse-table
+          path:
+            - RICARDO_DASILVA
+            - SIGMA_DEMO
+            - SAAS_BUSINESS_PERFORMANCE
+        columns:
+          - id: inode-1mic1UzfgCLctJk6VS2tB2/TRANSACTION_ID
+            formula: '[SAAS_BUSINESS_PERFORMANCE/Transaction Id]'
+          - id: inode-1mic1UzfgCLctJk6VS2tB2/CUSTOMER_ID
+            formula: '[SAAS_BUSINESS_PERFORMANCE/Customer Id]'
+          - id: inode-1mic1UzfgCLctJk6VS2tB2/TRANSACTION_DATE
+            formula: '[SAAS_BUSINESS_PERFORMANCE/Transaction Date]'
+            description: The exact calendar date when the transaction occurred
+          - id: inode-1mic1UzfgCLctJk6VS2tB2/TRANSACTION_MONTH
+            formula: '[SAAS_BUSINESS_PERFORMANCE/Transaction Month]'
+          - id: inode-1mic1UzfgCLctJk6VS2tB2/TRANSACTION_QUARTER
+            formula: '[SAAS_BUSINESS_PERFORMANCE/Transaction Quarter]'
+            description: Fiscal quarter (e.g., “FY25-Q1”) when the transaction took place
+          - id: inode-1mic1UzfgCLctJk6VS2tB2/FISCAL_YEAR
+            formula: '[SAAS_BUSINESS_PERFORMANCE/Fiscal Year]'
+            description: Fiscal year in which the transaction is recognized, used for financial and performance reporting
+          - id: inode-1mic1UzfgCLctJk6VS2tB2/DAY_OF_WEEK
+            formula: '[SAAS_BUSINESS_PERFORMANCE/Day of Week]'
+            description: >-
+              Day of the week when the transaction occurred (e.g., Monday, Tuesday). Useful for identifying weekly
+              patterns.
+          - id: inode-1mic1UzfgCLctJk6VS2tB2/CUSTOMER_COUNTRY
+            formula: '[SAAS_BUSINESS_PERFORMANCE/Customer Country]'
+            description: Country in which the customer is located
+          - id: inode-1mic1UzfgCLctJk6VS2tB2/CUSTOMER_STATE
+            formula: '[SAAS_BUSINESS_PERFORMANCE/Customer State]'
+            description: State, province, or regional subdivision of the customer’s address
+          - id: inode-1mic1UzfgCLctJk6VS2tB2/CUSTOMER_CITY
+            formula: '[SAAS_BUSINESS_PERFORMANCE/Customer City]'
+            description: City where the customer is based
+          - id: inode-1mic1UzfgCLctJk6VS2tB2/CUSTOMER_REGION
+            formula: '[SAAS_BUSINESS_PERFORMANCE/Customer Region]'
+            description: Predefined business region grouping customers (e.g., “North America”, “EMEA”, “APAC”).
+          - id: inode-1mic1UzfgCLctJk6VS2tB2/LATITUDE
+            formula: '[SAAS_BUSINESS_PERFORMANCE/Latitude]'
+          - id: inode-1mic1UzfgCLctJk6VS2tB2/LONGITUDE
+            formula: '[SAAS_BUSINESS_PERFORMANCE/Longitude]'
+          - id: inode-1mic1UzfgCLctJk6VS2tB2/PRODUCT_TIER
+            formula: '[SAAS_BUSINESS_PERFORMANCE/Product Tier]'
+            description: SaaS subscription level or pricing plan purchased (e.g., Basic, Pro, Enterprise)
+          - id: inode-1mic1UzfgCLctJk6VS2tB2/PRODUCT_NAME
+            formula: '[SAAS_BUSINESS_PERFORMANCE/Product Name]'
+            description: Specific product or module name sold as part of the transaction
+          - id: inode-1mic1UzfgCLctJk6VS2tB2/INDUSTRY_VERTICAL
+            formula: '[SAAS_BUSINESS_PERFORMANCE/Industry Vertical]'
+            description: Customer’s industry category (e.g., Healthcare, Finance, Technology)
+          - id: inode-1mic1UzfgCLctJk6VS2tB2/COMPANY_SIZE
+            formula: '[SAAS_BUSINESS_PERFORMANCE/Company Size]'
+            description: Organizational size classification of the customer (e.g., SMB, Mid-Market, Enterprise)
+          - id: inode-1mic1UzfgCLctJk6VS2tB2/CUSTOMER_SEGMENT
+            formula: '[SAAS_BUSINESS_PERFORMANCE/Customer Segment]'
+            description: Business-defined grouping based on customer type or value (e.g., “Strategic”, “Commercial”)
+          - id: inode-1mic1UzfgCLctJk6VS2tB2/ACCOUNT_MANAGER
+            formula: '[SAAS_BUSINESS_PERFORMANCE/Account Manager]'
+            description: Sales or success representative responsible for managing the customer relationship.
+          - id: inode-1mic1UzfgCLctJk6VS2tB2/SALES_CHANNEL
+            formula: '[SAAS_BUSINESS_PERFORMANCE/Sales Channel]'
+          - id: inode-1mic1UzfgCLctJk6VS2tB2/CUSTOMER_TENURE_MONTHS
+            formula: '[SAAS_BUSINESS_PERFORMANCE/Customer Tenure Months]'
+          - id: inode-1mic1UzfgCLctJk6VS2tB2/MONTHLY_RECURRING_REVENUE
+            formula: '[SAAS_BUSINESS_PERFORMANCE/Monthly Recurring Revenue]'
+          - id: inode-1mic1UzfgCLctJk6VS2tB2/ANNUAL_CONTRACT_VALUE
+            formula: '[SAAS_BUSINESS_PERFORMANCE/Annual Contract Value]'
+          - id: inode-1mic1UzfgCLctJk6VS2tB2/SETUP_FEE
+            formula: '[SAAS_BUSINESS_PERFORMANCE/Setup Fee]'
+          - id: inode-1mic1UzfgCLctJk6VS2tB2/TOTAL_TRANSACTION_VALUE
+            formula: '[SAAS_BUSINESS_PERFORMANCE/Total Transaction Value]'
+          - id: inode-1mic1UzfgCLctJk6VS2tB2/USER_SEATS
+            formula: '[SAAS_BUSINESS_PERFORMANCE/User Seats]'
+          - id: inode-1mic1UzfgCLctJk6VS2tB2/FEATURE_USAGE_SCORE
+            formula: '[SAAS_BUSINESS_PERFORMANCE/Feature Usage Score]'
+        metrics:
+          - id: hRohypbBee
+            formula: Sum([Monthly Recurring Revenue])
+            name: Total MRR
+            description: Total MRR across all customers - Revenue Metric
+          - id: 8NBOX37eZC
+            formula: Avg([Total Transaction Value])
+            name: Average Deal Size
+            description: Average deal size - Revenue Metric
+          - id: m8wfNtpq6q
+            formula: CountDistinct([Customer Id])
+            name: Customer Count
+            description: Unique Customer Count - Revenue Metric
+          - id: EkQl8MZW1i
+            formula: Sum([Annual Contract Value])
+            name: Total Annual Contract Value
+            description: Total Annual Contract Value - Revenue Summary
+          - id: hhvZbqdUMD
+            formula: Sum([User Seats])
+            name: Total Users Seats
+            description: Total user seats deployed - Operational Metric
+          - id: WU2dbWoQlK
+            formula: Avg([Feature Usage Score])
+            name: Average Feature Usage
+            description: Average feature usage - Operational Metric
+          - id: WsoAGGg3LX
+            formula: Avg([Customer Tenure Months])
+            name: Average Customer Tenure
+            description: Average Customer Tenure - Operational Metric
+        order:
+          - inode-1mic1UzfgCLctJk6VS2tB2/TRANSACTION_ID
+          - inode-1mic1UzfgCLctJk6VS2tB2/CUSTOMER_ID
+          - inode-1mic1UzfgCLctJk6VS2tB2/TRANSACTION_DATE
+          - inode-1mic1UzfgCLctJk6VS2tB2/TRANSACTION_MONTH
+          - inode-1mic1UzfgCLctJk6VS2tB2/TRANSACTION_QUARTER
+          - inode-1mic1UzfgCLctJk6VS2tB2/FISCAL_YEAR
+          - inode-1mic1UzfgCLctJk6VS2tB2/DAY_OF_WEEK
+          - inode-1mic1UzfgCLctJk6VS2tB2/CUSTOMER_COUNTRY
+          - inode-1mic1UzfgCLctJk6VS2tB2/CUSTOMER_STATE
+          - inode-1mic1UzfgCLctJk6VS2tB2/CUSTOMER_CITY
+          - inode-1mic1UzfgCLctJk6VS2tB2/CUSTOMER_REGION
+          - inode-1mic1UzfgCLctJk6VS2tB2/LATITUDE
+          - inode-1mic1UzfgCLctJk6VS2tB2/LONGITUDE
+          - inode-1mic1UzfgCLctJk6VS2tB2/PRODUCT_TIER
+          - inode-1mic1UzfgCLctJk6VS2tB2/PRODUCT_NAME
+          - inode-1mic1UzfgCLctJk6VS2tB2/INDUSTRY_VERTICAL
+          - inode-1mic1UzfgCLctJk6VS2tB2/COMPANY_SIZE
+          - inode-1mic1UzfgCLctJk6VS2tB2/CUSTOMER_SEGMENT
+          - inode-1mic1UzfgCLctJk6VS2tB2/ACCOUNT_MANAGER
+          - inode-1mic1UzfgCLctJk6VS2tB2/SALES_CHANNEL
+          - inode-1mic1UzfgCLctJk6VS2tB2/CUSTOMER_TENURE_MONTHS
+          - inode-1mic1UzfgCLctJk6VS2tB2/MONTHLY_RECURRING_REVENUE
+          - inode-1mic1UzfgCLctJk6VS2tB2/ANNUAL_CONTRACT_VALUE
+          - inode-1mic1UzfgCLctJk6VS2tB2/SETUP_FEE
+          - inode-1mic1UzfgCLctJk6VS2tB2/TOTAL_TRANSACTION_VALUE
+          - inode-1mic1UzfgCLctJk6VS2tB2/USER_SEATS
+          - inode-1mic1UzfgCLctJk6VS2tB2/FEATURE_USAGE_SCORE
+kind: data-model
