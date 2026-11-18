@@ -114,6 +114,19 @@ pages:
             formula: Avg([Customer Tenure Months])
             name: Average Customer Tenure
             description: Average Customer Tenure - Operational Metric
+          - id: 9grKi8mjw0
+            formula: Sum([Monthly Recurring Revenue]) * 12
+            name: Toal ARR
+            description: Annual Recurring Revenue (Total MRR x 12) - Revenue Metric
+            format:
+              kind: number
+              formatString: $,.0f
+            timeline:
+              dateColumnId: inode-1mic1UzfgCLctJk6VS2tB2/TRANSACTION_DATE
+              truncation: month
+              comparison:
+                comparisonPeriod: month
+                direction: higher-is-better
         order:
           - inode-1mic1UzfgCLctJk6VS2tB2/TRANSACTION_ID
           - inode-1mic1UzfgCLctJk6VS2tB2/CUSTOMER_ID
